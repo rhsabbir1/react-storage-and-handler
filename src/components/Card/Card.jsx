@@ -1,14 +1,13 @@
 import React from 'react';
+import { addToDb } from '../../utilites/fakedb';
 import './Card.css'
 
 const Card = (props) => {
     const {name , company,id} = props.card;
     const addToCard = (id)=>{
-        console.log(id)
+        addToDb(id)
     }
-    // const parches = (id) =>{
-    //     console.log('click' , id)
-    // }
+    
     return (
         <div className='person'>
             <h1>Name : {name}</h1>
